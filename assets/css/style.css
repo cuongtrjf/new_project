@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* inherit để kế thừa thằng cha */
+    box-sizing: inherit; 
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* cuộn mượt */
+    color: #fff;
+}
+.app{
+    height: 300vh;
+}
+.up{
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 70px;
+    right: 35px;
+    background-color: #b5b5b5;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.up--icon{
+    font-size: 2.5rem;
+    color: #fff;
+    padding: 5px 8px;
+}
+.wrap{
+    width: 100%;
+    background-color: #055eb5;
+}
+.header__top {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.header__top__left{
+    display: flex;
+}
+
+.header__top__left__wrapper{
+    font-size: 1.3rem;
+    padding: 7px 5px 7px 12px;
+}
+.header__top__left--link{
+    padding-right: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+.header__top__right{
+    display: flex;
+    align-items: center; /* căn giữa dòng các element trong khối tổng */ 
+    position: relative; /* vị trí tuyệt đối (cố định)- dành cho thằng cha */
+}
+
+.header__top__right__support{
+    font-size: 1.2rem;
+    color: #000;
+    padding: 5px 20px;
+    margin-right: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer; /* hiện bàn tay */
+    position: relative;
+}
+.header__top__right__support--icon{
+    font-size: 1.6rem;
+    padding-right: 10px;
+}
+.header__top__right__support:hover{
+    background-color:#f9921b;
+    color: #fff;
+}
+.header__top__right__cart{
+    font-size: 1.2rem;
+}
+.header__top__right__cart--link{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.header__top__right__cart--quantity{
+    border-radius: 5px;
+    padding: 1.5px 5px;
+    margin: 0 5px;
+    background-color: #f9921b;
+}
+.header__top__right__cart--icon{
+    font-size: 1.3rem;
+}
+.header__top__right__support__box::after{
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: 0;
+    width: 160px;
+    height: 20px;
+}
+.header__top__right__support:hover .header__top__right__support__box{
+    display: flex;
+}
+.header__top__right__support__box{
+    color: #000;
+    position: absolute; /* vị trí ăn theo thằng cha ( relative) */
+    /* set vị trí của thằng con ăn theo thằng cha */
+    top: 37px;
+    right: 0px;
+    width: 500px;
+    height: 130px;
+    background-color:#fff;
+    border-radius: 7px;
+    display: flex; /* chia layout*/
+    flex-direction: column; /* chia theo cột (mặc định display: flex là chia theo hàng) */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 2px 10px 1px #888888;
+    display: none;
+    cursor: default;
+}
+.header__top__right__support__box--title{
+    padding-bottom: 20px;
+    font-size: 2.2rem;
+    text-align: center; 
+    font-weight: 400;
+    line-height: 2.2rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    width: 90%;
+}
+.header__top__right__support__box__contact{
+    width: 100%;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-evenly; /* các khoảng trống giữa các item cách đều nhau(space-around là khoảng trống giữa gấp đôi lề) */
+    padding-top: 15px;
+}
+.header__top__right__support__box__contact--item--phone{
+    text-decoration: none;
+    color: #000;
+}
+.header__top__right__support__box__contact--item-icon1{
+    color: red;
+    font-size: 1.8rem;
+    margin-right: 5px;
+}
+
+.header__top__right__support__box__contact--item-icon2{
+    font-size: 2.5rem;
+    color: rgb(14, 199, 199);
+    margin-top: -3px;
+}
